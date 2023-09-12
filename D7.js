@@ -147,12 +147,10 @@ const hideAllImages = function () {};
 
 const changeColorWithRandom = function () {
   let h2Colored = document.getElementsByTagName("h2")[0];
-  let colors = ["red", "blue", "yellow", "green", "purple"];
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
   h2Colored.addEventListener("click", function () {
-    for (let i = 0; i < colors.length; i++) {
-      h2Colored = h2Colored.style.color = colors[i];
-    }
-    return h2Colored;
+    h2Colored.style.color = "#" + randomColor;
   });
 };
 //  DOESNT WORK
